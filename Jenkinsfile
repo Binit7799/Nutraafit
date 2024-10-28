@@ -1,5 +1,15 @@
 pipeline {
     agent any
+
+    environment {
+        NEXUS_VERSION = "nexus3"
+        NEXUS_PROTOCOL = "http"
+        NEXUS_URL = "http://localhost:8081"
+        NEXUS_REPOSITORY = "docker_images"
+        NEXUS_CREDENTIAL_ID = "nexusCred"
+        DOCKER_IMAGE_NAME = "nutraafit-app"
+    }
+
     stages {
         stage('Clone the Repo') {
             steps {
@@ -31,18 +41,40 @@ pipeline {
             }
         }
 
-
         stage('Docker Build') {
             steps {
                 script {
                     try {
                         dir('NutraaFit') {
                             echo 'Building Docker image...'
-                            bat 'docker build -t nutraafit-app:latest .'
+                            bat "docker build -t ${DOCKER_IMAGE_NAME}:latest ."
                         }
                     } catch (err) {
                         echo "Error during Docker build: ${err}"
                         error("Docker build failed")
+                    }
+                }
+            }
+        }
+
+        stage('Push to Nexus') {
+            steps {
+                script {
+                    try {
+                        echo 'Tagging Docker image for Nexus...'
+                        def nexusRepoUrl = "${NEXUS_URL}/repository/${NEXUS_REPOSITORY}"
+                        bat "docker tag ${DOCKER_IMAGE_NAME}:latest ${nexusRepoUrl}/${DOCKER_IMAGE_NAME}:latest"
+                        
+                        echo 'Logging into Nexus Docker repository...'
+                        bat """
+                            echo $env.DOCKER_PASSWORD | docker login -u $env.DOCKER_USERNAME --password-stdin ${nexusRepoUrl}
+                        """
+
+                        echo 'Pushing Docker image to Nexus...'
+                        bat "docker push ${nexusRepoUrl}/${DOCKER_IMAGE_NAME}:latest"
+                    } catch (err) {
+                        echo "Error pushing Docker image to Nexus: ${err}"
+                        error("Failed to push Docker image to Nexus")
                     }
                 }
             }
