@@ -188,10 +188,53 @@ const ScienceOfFitness = () => {
         Yoga and meditation are scientifically proven to reduce stress, lower cortisol levels, and manage chronic conditions such as hypertension and arthritis.
       </Paragraph>
 
-      <GraphicWrapper>
-        <FitnessGraphic src="https://your-graphic-url.com/fitness.jpg" alt="Fitness Graphic" />
-      </GraphicWrapper>
+<div>
+      <SubHeading>Anatomy & Muscles Introduction</SubHeading>
+      <Paragraph>
+      Understanding human anatomy and muscle structure is essential for performing exercises correctly and preventing injuries. It also helps in targeting the right muscle groups for strength training, flexibility, and overall fitness improvement.
+      </Paragraph>
+      <div>
+      <h5>Human Anatomy Overview</h5>
+      </div>
+      <Paragraph>The human body is composed of several systems working in harmony to support movement, strength, and coordination. Key systems that play a role in exercise and fitness include:</Paragraph>
+      <div>
+      <Highlight>Skeletal System: </Highlight>The bones of the skeleton provide the framework for the body, supporting tissues, protecting organs, and acting as levers for muscles to create movement.
+      </div>
+      <div>
+      <Highlight>Muscular System:</Highlight> Muscles are responsible for generating movement by contracting and relaxing. There are over 600 muscles in the human body, divided into three types:</div><div>
+       <div><span style={{ fontWeight: 'bold', color: 'blue' }}>Skeletal Muscles</span>: Voluntary muscles attached to bones that move the body.</div>
+       <div><span style={{ fontWeight: 'bold', color: 'blue' }}>Smooth Muscles</span>: Found in organs, like the stomach and intestines, and work involuntarily.</div>
+       <div><span style={{ fontWeight: 'bold', color: 'blue' }}>Cardiac Muscles</span>: The muscle of the heart, working constantly and involuntarily to pump blood throughout the body.</div>
+       </div>
+      <div>
+      <Highlight>Nervous System: </Highlight> The brain, spinal cord, and nerves coordinate movement and respond to internal and external stimuli, sending signals that tell the muscles to contract.
+      </div>
+      <div>
+      <Highlight>Circulatory System:</Highlight> The heart and blood vessels deliver oxygen and nutrients to the muscles during exercise, which is critical for maintaining energy and endurance.</div>
+      </div>
+      <SubHeading>Major Muscle Groups</SubHeading>
+      <div>
+      When training or working out, it's important to understand the major muscle groups of the body to effectively target them:
+      </div>
+      <h5>
+      Upper Body Muscles:
+      </h5>
+      <div>
+      <span style={{ fontWeight: 'bold', color: 'blue' }}>Chest (Pectorals):</span> Includes the pectoralis major and minor, crucial for pushing movements.</div>
+      <div><span style={{ fontWeight: 'bold', color: 'blue' }}>Back (Latissimus Dorsi, Trapezius, Rhomboids):</span> Helps with pulling movements and posture.</div>
+      <div> <span style={{ fontWeight: 'bold', color: 'blue' }}>Shoulders (Deltoids):</span> Provides range of motion for the arms.</div>
+      <div><span style={{ fontWeight: 'bold', color: 'blue' }}>Arms (Biceps, Triceps, Forearms)</span>Essential for pushing, pulling, and lifting.</div>
+      <h5>Core Mucles</h5>
 
+      <div>Abdominals: Includes the rectus abdominis (six-pack muscles), obliques, and transverse abdominis, which stabilize the torso and support posture.</div>
+      <div><span style={{ fontWeight: 'bold', color: 'blue' }}>Lower Back (Erector Spinae):</span> Supports the spine and allows for bending and lifting.</div>
+      
+      <h5>Lower Body Muscles:</h5>
+      <div><span style={{ fontWeight: 'bold', color: 'blue' }}>Quadriceps:</span> Located on the front of the thigh, essential for running, jumping, and squatting.</div>
+      <div><span style={{ fontWeight: 'bold', color: 'blue' }}>Hamstrings:</span> Located on the back of the thigh, responsible for leg flexion and stability.</div>
+      <div><span style={{ fontWeight: 'bold', color: 'blue' }}>Glutes (Gluteus Maximus, Medius, Minimus):</span> The largest muscles in the body, responsible for hip movement and stabilization.</div>
+      <div><span style={{ fontWeight: 'bold', color: 'blue' }}>Calves (Gastrocnemius, Soleus):</span> Important for ankle movement and supporting weight while standing and walking.</div>
+      
       <SubHeading>Conclusion</SubHeading>
       <Paragraph>
         Fitness science helps us understand the relationship between physical activity, nutrition, and overall health. By incorporating <Highlight>science-backed fitness practices</Highlight> into daily life, we can improve strength, endurance, and longevity while reducing the risk of chronic disease.

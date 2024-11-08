@@ -16,7 +16,9 @@ import Resistance from "./components/Resistance";
 import UserForms from "./components/UserForms";
 import Contact from "./pages/contact";
 import ScienceOfFitness from "./pages/FitnessScience";
-
+import Nutrition from "./pages/Nutrition"; 
+import About_Exercise from "./pages/About_Exercises";
+import Tracking from "./pages/Tracking";
 
 function App() {
   return (
@@ -33,6 +35,9 @@ function App() {
         <Route path="/exercise/userForms"  element={<UserForms />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/fitness-science" element={< ScienceOfFitness/>} />
+        <Route path="/nutrition" element={< Nutrition/>} />
+        <Route path="/exercise-info" element={<About_Exercise/>} />
+        <Route path="/tracking" element={<Tracking/>} />
 
         <Route path="*" element={<Error />} />
       </Routes>
